@@ -54,7 +54,6 @@ oldFitness = 99999;
     
     plotTitle = ["Epoch: "+ num2str(epoch) + " " + "Evolution: "+ num2str(Evolution)];
     fig = figure(1);
-    fig.WindowState = 'fullscreen';
     subplot(1,3,1)   %plot fitness
     plot(evolutionCount,allAverage,evolutionCount,allFitness);
     title(plotTitle);
