@@ -85,11 +85,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\classes\Individual.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\supportingFiles\generateWorld.cpp" />
     <ClCompile Include="src\supportingFiles\printVector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\classes\Individual.h" />
     <ClInclude Include="src\supportingFiles\generateWorld.h" />
     <ClInclude Include="src\supportingFiles\printVector.h" />
   </ItemGroup>

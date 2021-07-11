@@ -24,12 +24,18 @@
     <ClCompile Include="src\supportingFiles\printVector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\classes\Individual.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\supportingFiles\generateWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\supportingFiles\printVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\classes\Individual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
