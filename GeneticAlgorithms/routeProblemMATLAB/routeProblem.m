@@ -5,7 +5,7 @@ clear;
                     %%%%%%%%%%%% SETUP  %%%%%%%%%%%%
 
 %Create problem space - Generate and plot world
-WorldSize=15;
+WorldSize=input('how many cities are there?');
 World = rand([WorldSize,2]).*1000;
 
 
