@@ -13,7 +13,7 @@ bestInd = individual(World);
 
 epoch = 1;
                    %%%%%%%%%%%% SETUP END %%%%%%%%%%%%
-while epoch<100
+while epoch<30
     
 %Create population of 10 individuals, and sort for fitness
 population = population(World);

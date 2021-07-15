@@ -51,7 +51,7 @@ classdef individual
         function obj = determineFitness(obj, World)
             fitnessCheck = 0;
             %evaluate the distance between city i and city i+1, 9 times
-            for count=1:9
+            for count=1:length(World)-1
                 city1 = obj.route(count);
                 city2 = obj.route(count+1);
                 city1 = World(city1,:);
