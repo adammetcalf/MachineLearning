@@ -59,7 +59,8 @@ float Individual::getFitness()																				//getter for the fitness
 	return m_fitness;
 }
 
-const std::vector<int> Individual::getRoute()	const																				//gets the route
+const std::vector<int> Individual::getRoute()	const														//gets the route
 {
 	return m_route;
 }
+

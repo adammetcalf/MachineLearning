@@ -24,5 +24,7 @@ public:
 	float getFitness();																							//getter for fitness
 
 	const std::vector<int> getRoute() const;																	//gets the route
+
+	
 };
 

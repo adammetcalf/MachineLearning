@@ -32,7 +32,15 @@ int main()
 
 	Population popCheck(World, worldSize);														//create a population
 
-	
+	//*Testing the population is generating 10 distinct indivuiduals correctly
+
+	const std::vector<Individual> test = popCheck.getPopulation();								//obtain vecotr of individuals
+
+	for (auto element : test) {																	//go through each element in turn	
+		std::cout << element.getFitness() << '\n';												///get the fitness of the individual and print to screen
+	}
+
+	//*/
 
 	std::cin.get();
 

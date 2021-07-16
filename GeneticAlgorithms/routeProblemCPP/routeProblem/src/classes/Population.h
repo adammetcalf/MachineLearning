@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include "Individual.h"
+#include <algorithm>
 
 
 
@@ -13,8 +14,11 @@ private:
 	std::vector<Individual> m_pop{};														//vector of 'Individual' objects
 public:
 
-	Population(std::vector<std::vector<float> >& World, int worldSize);																		//constructor
+	Population(std::vector<std::vector<float> >& World, int worldSize);						//constructor
 
-	
+	const std::vector<Individual> getPopulation() const;									//gets the population
+
+	void sortFitness(std::vector<Individual> m_pop);										//sort by fitness (low to high). 
+
 };
 
