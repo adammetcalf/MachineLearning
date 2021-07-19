@@ -18,7 +18,8 @@ public:
 
 	const std::vector<Individual> getPopulation() const;									//gets the population
 
-	void sortFitness(std::vector<Individual> m_pop);										//sort by fitness (low to high). 
+	void sortFitness();																		//sort by fitness (low to high). 
+
 
 };
 
