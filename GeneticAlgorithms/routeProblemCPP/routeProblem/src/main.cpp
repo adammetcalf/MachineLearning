@@ -2,8 +2,14 @@
 #include <vector>
 #include "supportingFiles/generateWorld.h"
 #include "supportingFiles/printVector.h"
+#include "supportingFiles/gnuPlotIostream.h"
 #include "classes/Individual.h"
 #include "classes/Population.h"
+
+#include<random>
+#include<numeric>
+
+
 
 
 int main()
@@ -41,6 +47,30 @@ int main()
 	}
 
 	*/
+
+
+	Gnuplot gp("\"C:\\Program Files\\gnuplot\\bin\\gnuplot.exe\"");								//must explicitely point to gnuplot binary
+
+	std::random_device rd;
+	std::mt19937 mt(rd());
+	std::normal_distribution<double> normdist(0., 1.);
+
+	std::vector<double> v0, v1;
+	for (int i = 0; i < 1000; i++)
+	{
+		v0.push_back(normdist(mt));
+		v1.push_back(normdist(mt));
+	}
+
+	std::partial_sum(v0.begin(), v0.end(), v0.begin());
+	std::partial_sum(v1.begin(), v1.end(), v1.begin());
+
+	gp << "set title 'test Graph eh' \n";
+	gp << "plot '-' with lines title 'v0',"
+		<< "'-' with lines title 'v1' \n";
+	gp.send(v0);
+	gp.send(v1);
+
 
 	std::cin.get();
 
