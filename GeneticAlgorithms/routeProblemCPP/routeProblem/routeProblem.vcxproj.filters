@@ -44,5 +44,8 @@
     <ClInclude Include="src\classes\Population.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\supportingFiles\gnuPlotIostream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
