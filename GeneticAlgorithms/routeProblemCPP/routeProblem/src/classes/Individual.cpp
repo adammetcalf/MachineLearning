@@ -19,7 +19,9 @@ std::vector<int> Individual::randomiseRoute(int worldSize, std::vector<int>& m_r
 		m_route.push_back(i);
 	}
 
-	std::random_shuffle(m_route.begin(), m_route.end());													//use algroithm library to shuffle the vector
+	std::random_device rd;
+	std::mt19937 g(rd());
+	std::shuffle(m_route.begin(), m_route.end(),g);															//use algroithm library to shuffle the vector
 
 	/*
 	for (auto element : m_route) {																			//print route
@@ -41,11 +43,11 @@ float Individual::evaluateFitness(std::vector<int>& m_route, std::vector<std::ve
 		int city1Loc = m_route[i];																			//get 1st city location
 		int city2Loc = m_route[y];																			//get second city location
 
-		float city1X = World[city1Loc][0];																	//get city 1 x
-		float city1Y = World[city1Loc][1];																	//get city 1 y
+		float city1X = World[0][city1Loc];																	//get city 1 x
+		float city1Y = World[1][city1Loc];																	//get city 1 y
 
-		float city2X = World[city2Loc][0];																	//get city 2 x
-		float city2Y = World[city2Loc][1];																	//get city 2 y
+		float city2X = World[0][city2Loc];																	//get city 2 x
+		float city2Y = World[1][city2Loc];																	//get city 2 y
 
 		m_fitness = m_fitness + sqrt(pow(city1X - city2X, 2.0) + pow(city1Y - city2Y, 2.0));				//pythag.
 	}

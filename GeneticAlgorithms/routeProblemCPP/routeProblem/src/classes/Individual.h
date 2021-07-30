@@ -3,6 +3,8 @@
 #include <algorithm>																							//for randomiseing vector
 #include <iostream>
 #include <cmath>																								//for maths, would you believe
+#include <random>
+
 
 class Individual {
 private:
