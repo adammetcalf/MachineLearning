@@ -20,6 +20,6 @@ public:
 
 	void sortFitness();																		//sort by fitness (low to high). 
 
-
+	std::vector < std::vector<float> > getBestRoute(std::vector<std::vector<float> >& World, int worldSize);										//returns the route of the best individual
 };
 
