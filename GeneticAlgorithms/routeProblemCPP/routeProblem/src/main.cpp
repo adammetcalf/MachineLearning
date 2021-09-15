@@ -54,11 +54,25 @@ int main()
 		end epoch while loop
 	*/
 
-
 	Population popCheck(World, worldSize);														//create a population
 
-	/*//Testing the population is generating 10 distinct indivuiduals correctly
+	int epoch = 0;
+	while (epoch < 30)
+	{
+		int convolution = 0;
+		while (convolution < 50)
+		{
 
+
+			convolution++;
+		}
+
+		epoch++;
+	}
+	//need end of while loop, get actuall fittest individual
+
+	/*//Testing the population is generating 10 distinct indivuiduals correctly
+	
 	std::vector<Individual> test = popCheck.getPopulation();									//obtain vecotr of individuals
 
 	for (auto element : test) {																	//go through each element in turn	
@@ -67,7 +81,7 @@ int main()
 
 	*/
 
-	//need end of while loop, get actuall fittest individual
+	
 
 	std::vector < std::vector<float> > bestRoute = popCheck.getBestRoute(World,worldSize);		//get best individual
 
